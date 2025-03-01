@@ -1,3 +1,4 @@
+import os
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -722,5 +723,6 @@ def update_chat_response_7(n_clicks, prompt, stock_ticker):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Render sets the PORT environment variable
+    app.run_server(host='0.0.0.0', port=port, debug=False)
 
