@@ -1,1 +1,1 @@
-web: gunicorn stock:server --bind 0.0.0.0:8050
+web: gunicorn stocks:server --bind 0.0.0.0:8050
