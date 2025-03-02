@@ -280,7 +280,7 @@ def predict_moving_average(data, window=30):
 
 # App layout
 app = dash.Dash(__name__)
-
+server = app.server
 app.layout = html.Div([
     dcc.Store(id='chat-context', data=""),  # Store chat context
     html.Div([
